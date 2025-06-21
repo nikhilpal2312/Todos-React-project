@@ -1,11 +1,11 @@
-import React from 'react'
+
+import { useContext } from 'react';
 import { toast } from 'react-toastify';
+import { Todocontext } from '../Wrapper';
 
-const Read = (props) => {
-
-const todos = props.todos;
-const setTodos = props.setTodos;
-
+ const Read = () => {
+ const [todos, setTodos] = useContext(Todocontext)
+ 
     const RenderResult = todos.map((todo)=><div className='mb-2 flex justify-between items-center p-4 bg-gray-900 rounded'
      key={todo.id}> <span className='text-xl font-thin '>{todo.title} {todo.describe}</span> 
     <button  className="text-red-500 hover:text-red-700 transition text-lg" onClick = {() => deleteHandler(todo.id)}
