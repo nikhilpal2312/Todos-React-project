@@ -1,15 +1,13 @@
-import { useState } from "react";
-import Create from "./components/Create";
-import Read from "./components/Read";
+import { useState } from 'react'
+import Create from './components/Create'
+import Read from './components/Read'
 
 const App = () => {
 
-
+  
 const [todos, setTodos] = useState([
   {id: 1, title:"Get Started", isCompleted:false},
 ])
-
-
 
   return (
     <div className="w-screen h-screen p-10 text-white bg-gray-800">
@@ -20,4 +18,4 @@ const [todos, setTodos] = useState([
   )
 }
 
-export default App;
+export default App
